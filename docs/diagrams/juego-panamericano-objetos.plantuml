@@ -1,0 +1,69 @@
+@startuml juego Venezuela Colombia
+object jugador1
+jugador1 : name = "Amanda"
+
+object jugador2
+jugador2 : name = "Genesis"
+
+object jugador3
+jugador3 : name = "Maria"
+
+object jugador4
+jugador4 : name = "Carolina"
+
+object jugador5
+jugador5 : name = "Fernanda"
+
+object capitan1
+capitan1 : name = "Ana"
+
+object jugador7
+jugador7 : name = "Aurelis"
+
+object jugador8
+jugador8 : name = "Anastacia"
+
+object jugador9
+jugador9 : name = "Maria"
+
+object jugador10
+jugador10 : name = "Ana"
+
+object jugador11
+jugador11 : name = "Berta"
+
+object capitan2
+capitan2 : name = "Carla"
+
+object entrenador1
+object entrenador2
+
+object "Equipo Venezuela" as equipoVenezuela
+object "Equipo Colombia" as equipoColombia
+
+object "Juego: Final Femenino" as juego 
+
+juego : localidad = "Chile"
+
+jugador1 -- equipoVenezuela
+jugador2 -- equipoVenezuela
+jugador3 -- equipoVenezuela
+jugador4 -- equipoVenezuela
+jugador5 -- equipoVenezuela
+capitan1 -- equipoVenezuela
+
+entrenador1 -- equipoVenezuela
+
+jugador7 -- equipoColombia
+jugador8 -- equipoColombia
+jugador9 -- equipoColombia
+jugador10 -- equipoColombia
+jugador11 -- equipoColombia
+capitan2 -- equipoColombia
+
+entrenador2 -- equipoVenezuela
+
+equipoVenezuela -- juego
+equipoColombia -- juego
+
+@enduml

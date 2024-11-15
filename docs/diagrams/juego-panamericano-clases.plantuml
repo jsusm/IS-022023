@@ -1,0 +1,39 @@
+@startuml Juego Panamericano Voleibol
+class Persona {
+    + telefono: String
+    + nombre: String
+    + direccion: String
+}
+
+class Jugador extends Persona {
+    + numero: Integer
+    + posicion: String
+}
+
+class Capitan extends Jugador {
+}
+
+class Entrenador extends Persona {
+    + nivelAcreditacion: String
+    + anosExperiencia: Integer
+}
+
+class Equipo {
+    - nombre: String
+    - registro: String
+    + capitan: Capitan
+    - entrenador: Entrenador
+}
+
+class Juego {
+    - localidad: String
+    - puntuacion: Integer
+    - equipo1: Equipo
+    - equipo2: Equipo
+}
+
+Jugador --o Equipo: pertenece a
+Capitan --o Equipo: pertenece a
+Entrenador --o Equipo: entrena a
+Equipo --o Juego: participa en
+@enduml
